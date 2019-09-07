@@ -3,7 +3,21 @@ nav:
     - Home: index.md
     - Service:
         - Nginx: service/nginx.md
+        - Supervisor: service/supervisor.md
+        - Mkdocs: service/mkdocs.md
     - Sub:
         - Detail: detail.md
     - About: about.md
-theme: material
+theme: 
+  name: material
+  palette:
+    primary: 'Light Green'
+    accent: 'pink'
+  logo:
+    icon: 'cloud'
+  favicon: 'static/images/favicon.ico'
+# repo_name: 'linqingbin.github.io'
+# repo_url: 'https://github.com/linqingbin/linqingbin.github.io'
+
+extra_css:
+    - static/css/extra.css

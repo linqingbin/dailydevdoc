@@ -39,7 +39,7 @@ ps -ef |grep nginx
 ls /var/log/nginx/
 ```
 
-## Site Config
+## Config
 
 ### Config file location
 
@@ -87,10 +87,10 @@ location /static/ {
 }
 ```
 
-## Problem shooting
+## Debug
 ### 403 Error
 
 Maybe file permission problem, increase Nginx permsision or set user at nginx.conf, or decrease target files permission.
 
 ## Referral
-[Nginx Offcial](http://nginx.org/en/docs/beginners_guide.html)
+[Nginx Offcial Document](http://nginx.org/en/docs/beginners_guide.html)
