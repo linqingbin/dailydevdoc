@@ -1,0 +1,8 @@
+site_name: Daily Developing Guide
+nav:
+    - Home: index.md
+    - Sub:
+        - Detail: detail.md
+        - Mkdocs: Tool\mkdocs.md
+    - About: about.md
+theme: material
