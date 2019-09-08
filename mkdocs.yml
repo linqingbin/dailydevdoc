@@ -1,13 +1,39 @@
 site_name: Daily Developing Guide
 nav:
     - Home: index.md
-    - Service:
-        - Nginx: service/nginx.md
-        - Supervisor: service/supervisor.md
-        - Mkdocs: service/mkdocs.md
-    - Sub:
-        - Detail: detail.md
-    - About: about.md
+    - Language:
+        - Python: language/python.md
+    #     - SQL
+    #     - HTML
+    #     - CSS
+    #     - JS
+    #     - Shell
+    # - Client:
+    #     - Web
+    #     - Vue
+    - Server:
+        - Nginx: server/nginx.md
+        - Supervisor: server/supervisor.md
+        - Mkdocs: server/mkdocs.md
+        # - Django
+        # - Flask
+        # - Gunrion
+        # - Mongodb
+        # - PostgreSQL
+        # - Linux
+    # - Modeling:
+    #     - Data preprocessing: modeling/dataPreprocessing.md
+        # - Clusifiy
+        # - Cluster 
+        # - Utils
+        # - SQL Calculation
+        # - NLP
+        # - Computer Vision
+        # - Audio
+    # - Tool:
+    #     - Git
+    #     - VScode
+    
 theme: 
   name: material
   palette:

@@ -6,3 +6,8 @@ h2 {
     font-weight: 500 !important;
     color: rgb(124, 179, 66);
 }
+
+h3 {
+    font-size: 0.8rem !important;
+    color: rgb(233, 30, 99);
+}
