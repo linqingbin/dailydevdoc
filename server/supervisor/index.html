@@ -31,17 +31,23 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../static/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
-        <title>Nginx - Daily Developing Guide</title>
+        <title>Supervisor - Daily Developing Guide</title>
       
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
       
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7cb342">
       
     
     
@@ -57,13 +63,17 @@
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../static/css/extra.css">
+    
     
       
     
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="light-green" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -75,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#nginx" tabindex="1" class="md-skip">
+      <a href="#supervisor" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -86,7 +96,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="../.." title="Daily Developing Guide" class="md-header-nav__button md-logo">
           
-            <i class="md-icon"></i>
+            <i class="md-icon">cloud</i>
           
         </a>
       </div>
@@ -101,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Nginx
+                Supervisor
               
             </span>
           
@@ -156,7 +166,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../.." title="Daily Developing Guide" class="md-nav__button md-logo">
       
-        <i class="md-icon"></i>
+        <i class="md-icon">cloud</i>
       
     </a>
     Daily Developing Guide
@@ -180,22 +190,70 @@
       
       
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Language
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Language
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../language/python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
-    <label class="md-nav__link" for="nav-2">
-      Service
+    <label class="md-nav__link" for="nav-3">
+      Server
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Service
+      <label class="md-nav__title" for="nav-3">
+        Server
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="Nginx" class="md-nav__link">
+      Nginx
+    </a>
+  </li>
+
         
           
           
@@ -212,11 +270,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Nginx
+        Supervisor
       </label>
     
-    <a href="./" title="Nginx" class="md-nav__link md-nav__link--active">
-      Nginx
+    <a href="./" title="Supervisor" class="md-nav__link md-nav__link--active">
+      Supervisor
     </a>
     
       
@@ -245,29 +303,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#start-server" class="md-nav__link">
-    Start server
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test-config" class="md-nav__link">
-    Test config
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#view-process" class="md-nav__link">
-    View process
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#view-logs" class="md-nav__link">
-    View logs
+  <a href="#start" class="md-nav__link">
+    Start
   </a>
   
 </li>
@@ -278,63 +315,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#site-config" class="md-nav__link">
-    Site Config
+  <a href="#command-tool" class="md-nav__link">
+    Command tool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    Debug
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#config-file-location" class="md-nav__link">
-    Config file location
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#keywords" class="md-nav__link">
-    Keywords
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-sample" class="md-nav__link">
-    Config sample
+  <a href="#execute-faild" class="md-nav__link">
+    Execute faild
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#problem-shooting" class="md-nav__link">
-    Problem shooting
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#403-error" class="md-nav__link">
-    403 Error
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#referral" class="md-nav__link">
-    Referral
-  </a>
   
 </li>
       
@@ -349,56 +359,20 @@
   </li>
 
         
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      Sub
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        Sub
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
           
           
           
 
 
   <li class="md-nav__item">
-    <a href="../../detail/" title="Detail" class="md-nav__link">
-      Detail
+    <a href="../mkdocs/" title="Mkdocs" class="md-nav__link">
+      Mkdocs
     </a>
   </li>
 
         
       </ul>
     </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../about/" title="About" class="md-nav__link">
-      About
-    </a>
   </li>
 
     
@@ -438,29 +412,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#start-server" class="md-nav__link">
-    Start server
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#test-config" class="md-nav__link">
-    Test config
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#view-process" class="md-nav__link">
-    View process
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#view-logs" class="md-nav__link">
-    View logs
+  <a href="#start" class="md-nav__link">
+    Start
   </a>
   
 </li>
@@ -471,63 +424,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#site-config" class="md-nav__link">
-    Site Config
+  <a href="#command-tool" class="md-nav__link">
+    Command tool
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    Config
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    Debug
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#config-file-location" class="md-nav__link">
-    Config file location
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#keywords" class="md-nav__link">
-    Keywords
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#config-sample" class="md-nav__link">
-    Config sample
+  <a href="#execute-faild" class="md-nav__link">
+    Execute faild
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#problem-shooting" class="md-nav__link">
-    Problem shooting
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#403-error" class="md-nav__link">
-    403 Error
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#referral" class="md-nav__link">
-    Referral
-  </a>
   
 </li>
       
@@ -548,92 +474,41 @@
               
                 
                 
-                <h1 id="nginx">Nginx</h1>
+                <h1 id="supervisor">Supervisor</h1>
 <h2 id="install">Install</h2>
-<p>Install on Ubuntu</p>
-<pre><code>sudo apt-get update
-sudo apt-get install nginx
-</code></pre>
-
-<p>Version check</p>
-<pre><code>nginx -v
+<pre><code class="shell">pip install supervisor
 </code></pre>
 
 <h2 id="admin">Admin</h2>
-<h3 id="start-server">Start server</h3>
-<pre><code class="shell">sudo /etc/init.d/nginx start
-# or
-sudo /usr/local/nginx/sbin/nginx
-# or
-sudo service nginx start
-# commands: stop, status, reload
+<h3 id="start">Start</h3>
+<pre><code class="shell"># In config directory
+cd /etc/supervisor/
+supervisord
 </code></pre>
 
-<h3 id="test-config">Test config</h3>
-<pre><code>sudo nginx -t
+<p>If start multiple supervisor task accidently, kill process find in <code>ps -ef</code>.</p>
+<h2 id="command-tool">Command tool</h2>
+<pre><code class="shell"># run
+supervisorctl
+# shutdown
+supervisorctl shutdown
 </code></pre>
 
-<h3 id="view-process">View process</h3>
-<pre><code>ps -ef |grep nginx
+<h2 id="config">Config</h2>
+<p>File location: /etc/supervisor/supervisord.conf</p>
+<p>Config Sample</p>
+<pre><code class="shell">[supervisord]
+
+[supervisorctl]
+
+[program:foo]
+command=/root/projects/servertest/env/bin/python /root/projects/servertest/manage.py runserver
 </code></pre>
 
-<h3 id="view-logs">View logs</h3>
-<pre><code>ls /var/log/nginx/
+<h2 id="debug">Debug</h2>
+<h3 id="execute-faild">Execute faild</h3>
+<pre><code>Permission related
 </code></pre>
-
-<h2 id="site-config">Site Config</h2>
-<h3 id="config-file-location">Config file location</h3>
-<ul>
-<li><code>/etc/nginx/nginx.conf</code></li>
-<li><code>/etc/nginx/sites-enabled/default</code></li>
-</ul>
-<h3 id="keywords">Keywords</h3>
-<ul>
-<li>listen: port to listen</li>
-<li>server_name: host or domin</li>
-<li>root: site root directory</li>
-<li>location: route index</li>
-</ul>
-<h3 id="config-sample">Config sample</h3>
-<ul>
-<li>Static website server</li>
-</ul>
-<pre><code>server {
-    listen 80;
-    server_name 10.10.10.10;
-
-    root /{app_root_directory}/;
-    index index.html;
-}
-</code></pre>
-
-<ul>
-<li>Dynamic website server</li>
-</ul>
-<pre><code class="shell">server {
-    listen 80;
-    server_name 10.10.10.10;
-
-    location / {
-        proxy_pass {dynamic server url};
-        # sample: proxy_pass http://127.0.0.1:5500
-    }
-}
-</code></pre>
-
-<ul>
-<li>Add static resource </li>
-</ul>
-<pre><code>location /static/ {
-    root /{app_static_directory}/;
-}
-</code></pre>
-
-<h2 id="problem-shooting">Problem shooting</h2>
-<h3 id="403-error">403 Error</h3>
-<p>Maybe file permission problem, increase Nginx permsision or set user at nginx.conf, or decrease target files permission.</p>
-<h2 id="referral">Referral</h2>
-<p><a href="http://nginx.org/en/docs/beginners_guide.html">Nginx Offcial</a></p>
                 
                   
                 
@@ -654,7 +529,7 @@ sudo service nginx start
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../nginx/" title="Nginx" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -663,19 +538,19 @@ sudo service nginx start
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Nginx
               </span>
             </div>
           </a>
         
         
-          <a href="../../detail/" title="Detail" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../mkdocs/" title="Mkdocs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Detail
+                Mkdocs
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
