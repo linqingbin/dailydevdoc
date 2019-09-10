@@ -3,11 +3,13 @@ nav:
     - Home: index.md
     - Language:
         - Python: language/python.md
-    #     - SQL
+        - SQL: language/sql.md
+        - Unix Commands & Bash: language/unix_commnads_bash.md
+
     #     - HTML
     #     - CSS
     #     - JS
-    #     - Shell
+        
     # - Client:
     #     - Web
     #     - Vue
@@ -15,12 +17,12 @@ nav:
         - Nginx: server/nginx.md
         - Supervisor: server/supervisor.md
         - Mkdocs: server/mkdocs.md
-        # - Django
+        - Django: server/django.md
+        - Airflow: server/airflow.md
         # - Flask
         # - Gunrion
         # - Mongodb
         # - PostgreSQL
-        # - Linux
     # - Modeling:
     #     - Data preprocessing: modeling/dataPreprocessing.md
         # - Clusifiy
