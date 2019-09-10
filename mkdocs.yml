@@ -5,4 +5,6 @@ nav:
         - Detail: detail.md
         - Mkdocs: Tool\mkdocs.md
     - About: about.md
+    - Airflow: airflow.md
+    - Django: django.md
 theme: material
