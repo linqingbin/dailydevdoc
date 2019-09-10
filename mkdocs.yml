@@ -1,10 +1,49 @@
 site_name: Daily Developing Guide
 nav:
     - Home: index.md
-    - Sub:
-        - Detail: detail.md
-        - Mkdocs: Tool\mkdocs.md
-    - About: about.md
-    - Airflow: airflow.md
-    - Django: django.md
-theme: material
+    - Language:
+        - Python: language/python.md
+    #     - SQL
+    #     - HTML
+    #     - CSS
+    #     - JS
+    #     - Shell
+    # - Client:
+    #     - Web
+    #     - Vue
+    - Server:
+        - Nginx: server/nginx.md
+        - Supervisor: server/supervisor.md
+        - Mkdocs: server/mkdocs.md
+        # - Django
+        # - Flask
+        # - Gunrion
+        # - Mongodb
+        # - PostgreSQL
+        # - Linux
+    # - Modeling:
+    #     - Data preprocessing: modeling/dataPreprocessing.md
+        # - Clusifiy
+        # - Cluster 
+        # - Utils
+        # - SQL Calculation
+        # - NLP
+        # - Computer Vision
+        # - Audio
+    # - Tool:
+    #     - Git
+    #     - VScode
+    
+theme: 
+  name: material
+  palette:
+    primary: 'Light Green'
+    accent: 'pink'
+  logo:
+    icon: 'cloud'
+  favicon: 'static/images/favicon.ico'
+# repo_name: 'linqingbin.github.io'
+# repo_url: 'https://github.com/linqingbin/linqingbin.github.io'
+
+extra_css:
+    - static/css/extra.css
