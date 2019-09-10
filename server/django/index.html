@@ -36,7 +36,7 @@
     
     
       
-        <title>Supervisor - Daily Developing Guide</title>
+        <title>Django - Daily Developing Guide</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#supervisor" tabindex="1" class="md-skip">
+      <a href="#django" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Supervisor
+                Django
               
             </span>
           
@@ -283,6 +283,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../supervisor/" title="Supervisor" class="md-nav__link">
+      Supervisor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mkdocs/" title="Mkdocs" class="md-nav__link">
+      Mkdocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -294,11 +318,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Supervisor
+        Django
       </label>
     
-    <a href="./" title="Supervisor" class="md-nav__link md-nav__link--active">
-      Supervisor
+    <a href="./" title="Django" class="md-nav__link md-nav__link--active">
+      Django
     </a>
     
       
@@ -327,8 +351,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#start" class="md-nav__link">
-    Start
+  <a href="#start-new-project" class="md-nav__link">
+    Start new project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-new-app" class="md-nav__link">
+    Start new app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-admin-password" class="md-nav__link">
+    Change admin password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-different-ways-to-add-url" class="md-nav__link">
+    Two different ways to add url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequently-used-moudles" class="md-nav__link">
+    Frequently used moudles
   </a>
   
 </li>
@@ -339,36 +391,104 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#command-tool" class="md-nav__link">
-    Command tool
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debug" class="md-nav__link">
-    Debug
+  <a href="#models" class="md-nav__link">
+    Models
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#execute-faild" class="md-nav__link">
-    Execute faild
+  <a href="#init-model" class="md-nav__link">
+    Init model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-model" class="md-nav__link">
+    Query model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-model" class="md-nav__link">
+    Debugging model
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    Views
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-response" class="md-nav__link">
+    Build response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-request-content" class="md-nav__link">
+    Get request content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    Test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-rest-framework" class="md-nav__link">
+    Django Rest framework
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install_1" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-new-api" class="md-nav__link">
+    Create new API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referral" class="md-nav__link">
+    Referral
+  </a>
   
 </li>
       
@@ -380,30 +500,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../mkdocs/" title="Mkdocs" class="md-nav__link">
-      Mkdocs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../django/" title="Django" class="md-nav__link">
-      Django
-    </a>
   </li>
 
         
@@ -460,8 +556,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#start" class="md-nav__link">
-    Start
+  <a href="#start-new-project" class="md-nav__link">
+    Start new project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-new-app" class="md-nav__link">
+    Start new app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-admin-password" class="md-nav__link">
+    Change admin password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-different-ways-to-add-url" class="md-nav__link">
+    Two different ways to add url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequently-used-moudles" class="md-nav__link">
+    Frequently used moudles
   </a>
   
 </li>
@@ -472,36 +596,104 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#command-tool" class="md-nav__link">
-    Command tool
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    Config
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#debug" class="md-nav__link">
-    Debug
+  <a href="#models" class="md-nav__link">
+    Models
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#execute-faild" class="md-nav__link">
-    Execute faild
+  <a href="#init-model" class="md-nav__link">
+    Init model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-model" class="md-nav__link">
+    Query model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-model" class="md-nav__link">
+    Debugging model
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    Views
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-response" class="md-nav__link">
+    Build response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-request-content" class="md-nav__link">
+    Get request content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    Test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-rest-framework" class="md-nav__link">
+    Django Rest framework
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install_1" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-new-api" class="md-nav__link">
+    Create new API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referral" class="md-nav__link">
+    Referral
+  </a>
   
 </li>
       
@@ -522,41 +714,263 @@
               
                 
                 
-                <h1 id="supervisor">Supervisor</h1>
+                <h1 id="django">Django</h1>
 <h2 id="install">Install</h2>
-<pre><code class="shell">pip install supervisor
+<pre><code>pip install django
 </code></pre>
 
 <h2 id="admin">Admin</h2>
-<h3 id="start">Start</h3>
-<pre><code class="shell"># In config directory
-cd /etc/supervisor/
-supervisord
+<h3 id="start-new-project">Start new project</h3>
+<pre><code>django-admin startproject {site name}
 </code></pre>
 
-<p>If start multiple supervisor task accidently, kill process find in <code>ps -ef</code>.</p>
-<h2 id="command-tool">Command tool</h2>
-<pre><code class="shell"># run
-supervisorctl
-# shutdown
-supervisorctl shutdown
+<h3 id="start-new-app">Start new app</h3>
+<ol>
+<li>Create new app folder: <code>python manage.py startapp {app name} {app path}</code></li>
+<li>Add app to <code>setting.py</code>: <code>setting.installed_apps</code></li>
+<li>
+<p>Create Model in <code>models.py</code></p>
+<pre><code>from django.db import models
+
+class User(models.Model):
+    name = models.CharField(max_length=50, default="admin")
+    email = models.EmailField(max_length=50)
+</code></pre>
+</li>
+<li>
+<p>Create view in <code>views.py</code></p>
+<pre><code>from django.http import JsonResponse, HttpResponse
+def hello(request):
+    return HttpResponse("Hello")
+</code></pre>
+</li>
+<li>
+<p>Add route in <code>urls.py</code></p>
+<pre><code>from django.urls import path
+from newapp import views
+
+urlpatterns = [
+    path('newapp', views.hello),
+]
+</code></pre>
+</li>
+<li>
+<p>Add urls in global <code>urls.py</code>:</p>
+<pre><code>from django.conf.urls import include, url
+urlpatterns = [
+    path('newapp', include('newapp.urls')),
+]
+</code></pre>
+</li>
+<li>
+<p>(Optionally) Add model to admin in <code>admin.py</code></p>
+<pre><code>from django.contrib import admin
+from newpp.models import User
+
+@admin.register(User)
+def UserAdmin(admin.ModelAdmin):
+    pass
+</code></pre>
+</li>
+<li>
+<p>Finished</p>
+</li>
+</ol>
+<h3 id="change-admin-password">Change admin password</h3>
+<pre><code>python manage.py changepassword &lt;user_name&gt;
 </code></pre>
 
-<h2 id="config">Config</h2>
-<p>File location: /etc/supervisor/supervisord.conf</p>
-<p>Config Sample</p>
-<pre><code class="shell">[supervisord]
-
-[supervisorctl]
-
-[program:foo]
-command=/root/projects/servertest/env/bin/python /root/projects/servertest/manage.py runserver
+<h3 id="two-different-ways-to-add-url">Two different ways to add url</h3>
+<ul>
+<li>Use include</li>
+</ul>
+<pre><code class="python">from django.conf.urls import include, url
+urlpatterns = [
+    path('newapp', include('newapp.urls')),
+]
 </code></pre>
 
-<h2 id="debug">Debug</h2>
-<h3 id="execute-faild">Execute faild</h3>
-<pre><code>Permission related
+<ul>
+<li>Import module</li>
+</ul>
+<pre><code class="python">from django.conf.urls import include, url
+import newapp
+urlpatterns = [
+    path('newapp', newapp.urls),
+]
+
 </code></pre>
+
+<h3 id="frequently-used-moudles">Frequently used moudles</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Moduel</th>
+<th>Useage</th>
+<th>Sample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">django.db</td>
+<td>build model</td>
+<td>from django.db import models</td>
+</tr>
+<tr>
+<td align="center">django.http</td>
+<td>build response</td>
+<td>from django.http import JsonResponse</td>
+</tr>
+<tr>
+<td align="center">django.urls</td>
+<td>build route</td>
+<td>from django.urls import path</td>
+</tr>
+<tr>
+<td align="center">django.core</td>
+<td>core modules</td>
+<td>from django.core import serializers</td>
+</tr>
+<tr>
+<td align="center">django.contrib</td>
+<td>addon modules</td>
+<td>from django.contrib import admin</td>
+</tr>
+<tr>
+<td align="center">django.shortcuts</td>
+<td>Convenient shortcut</td>
+<td>from django.shortcuts import render</td>
+</tr>
+<tr>
+<td align="center">django.utils</td>
+<td>common tools</td>
+<td>from django.utils import timezone</td>
+</tr>
+<tr>
+<td align="center">django.conf</td>
+<td>get django config</td>
+<td>from django.conf import settings</td>
+</tr>
+<tr>
+<td align="center">django.apps</td>
+<td>get django app config</td>
+<td>from django.apps import AppConfig</td>
+</tr>
+<tr>
+<td align="center">django.test</td>
+<td>build test</td>
+<td>from django.test import TestCase</td>
+</tr>
+</tbody>
+</table>
+<h2 id="models">Models</h2>
+<h3 id="init-model">Init model</h3>
+<pre><code>Question(question_text=&quot;What's new?&quot;,pub_date=timezone.now())
+</code></pre>
+
+<h3 id="query-model">Query model</h3>
+<pre><code>Question.objects.get(pk=1)
+Question.objects.all()
+Question.objects.filter()
+Question.objects.raw({SQL})
+</code></pre>
+
+<h3 id="debugging-model">Debugging model</h3>
+<pre><code>python manage.py shell
+</code></pre>
+
+<h2 id="views">Views</h2>
+<h3 id="build-response">Build response</h3>
+<ul>
+<li>Html</li>
+</ul>
+<pre><code class="python">from django.shortcuts import render
+def hello(request)
+    return render(request, '{html page path}', {data})
+</code></pre>
+
+<ul>
+<li>Json</li>
+</ul>
+<pre><code class="python">from django.http import HttpResponse
+def hello(request)
+    return JsonResponse({data})
+</code></pre>
+
+<ul>
+<li>Others</li>
+</ul>
+<pre><code class="python">from django.http import HttpResponse
+def hello(request)
+    return HttpResponse(status=201)
+</code></pre>
+
+<h3 id="get-request-content">Get request content</h3>
+<ul>
+<li>GET: <code>request.GET.dict()</code></li>
+<li>POST: <code>request.POST.dict()</code></li>
+<li>PUT: <code>from django.http import QueryDict;QueryDict(request.body)</code></li>
+<li>PATCH: same with put</li>
+<li>DELETE: same with put</li>
+</ul>
+<h2 id="test">Test</h2>
+<p>Build test script</p>
+<pre><code>from django.test import TestCase
+class Test1(TestCase):
+    def test_get():
+        result = self.client.get('user')
+</code></pre>
+
+<p>Run test</p>
+<pre><code>python manage.py test newapp
+</code></pre>
+
+<h2 id="django-rest-framework">Django Rest framework</h2>
+<h3 id="install_1">Install</h3>
+<pre><code>pip install rest_framework
+</code></pre>
+
+<h3 id="create-new-api">Create new API</h3>
+<ol>
+<li>Create model as usual</li>
+<li>
+<p>Serialize Model</p>
+<pre><code>from newapp.models import User
+from rest_framework import serializers
+
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        User = User
+        fields = ('username', 'email')
+</code></pre>
+</li>
+<li>
+<p>Create API view</p>
+<pre><code>from rest_framework import viewsets
+from newapp.models import User
+from newapp.serializers import UserSerializer
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all().order_by('-date_joined')
+    serializer_class = UserSerializer
+</code></pre>
+</li>
+<li>
+<p>Add urls</p>
+<pre><code>from django.urls import include, path
+from rest_framework import routers
+from newapp import views
+
+router = routers.DefaultRouter()
+router.register('users', views.UserViewSet)
+</code></pre>
+</li>
+</ol>
+<h2 id="referral">Referral</h2>
+<ul>
+<li><a href="https://docs.djangoproject.com">Django Document</a></li>
+<li><a href="https://www.django-rest-framework.org/tutorial/quickstart/">Django Rest framework quick start site</a></li>
+</ul>
                 
                   
                 
@@ -577,7 +991,7 @@ command=/root/projects/servertest/env/bin/python /root/projects/servertest/manag
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../nginx/" title="Nginx" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../mkdocs/" title="Mkdocs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -586,19 +1000,19 @@ command=/root/projects/servertest/env/bin/python /root/projects/servertest/manag
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Nginx
+                Mkdocs
               </span>
             </div>
           </a>
         
         
-          <a href="../mkdocs/" title="Mkdocs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../airflow/" title="Airflow" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Mkdocs
+                Airflow
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
