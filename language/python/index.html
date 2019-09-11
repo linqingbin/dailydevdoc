@@ -782,18 +782,19 @@
               
                 
                 
-                <h1 id="python">Python</h1>
-<h2 id="install">Install</h2>
-<h3 id="centos">Centos</h3>
+                <h1 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h1>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<h3 id="centos">Centos<a class="headerlink" href="#centos" title="Permanent link">&para;</a></h3>
 <p><a href="https://janikarhunen.fi/how-to-install-python-3-6-1-on-centos-7">https://janikarhunen.fi/how-to-install-python-3-6-1-on-centos-7</a></p>
-<h3 id="ubuntu">Ubuntu</h3>
+<h3 id="ubuntu">Ubuntu<a class="headerlink" href="#ubuntu" title="Permanent link">&para;</a></h3>
 <p>Use ppa (Personal Package Archive)</p>
-<pre><code>sudo add-apt-repository ppa:deadsnakes/ppa
+<div class="codehilite"><pre><span></span>sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt-get update
 sudo apt-get install python3.6
-</code></pre>
+</pre></div>
 
-<h3 id="install-the-necessary-libraries">Install the necessary libraries</h3>
+
+<h3 id="install-the-necessary-libraries">Install the necessary libraries<a class="headerlink" href="#install-the-necessary-libraries" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>pip: <a href="https://pip.pypa.io/en/stable/installing/">https://pip.pypa.io/en/stable/installing/</a></p>
@@ -802,68 +803,80 @@ sudo apt-get install python3.6
 <p>Virtualenv: <code>pip install virtualenv</code></p>
 </li>
 </ul>
-<h2 id="admin">Admin</h2>
-<h3 id="alias-python-name">Alias python name</h3>
-<pre><code>alias python=python3.7
-</code></pre>
+<h2 id="admin">Admin<a class="headerlink" href="#admin" title="Permanent link">&para;</a></h2>
+<h3 id="alias-python-name">Alias python name<a class="headerlink" href="#alias-python-name" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>alias python=python3.7
+</pre></div>
+
 
 <p>This command can't run use <code>sudo</code>, because it is a user level command. </p>
-<h3 id="pip-from-image-source">Pip from image source</h3>
+<h3 id="pip-from-image-source">Pip from image source<a class="headerlink" href="#pip-from-image-source" title="Permanent link">&para;</a></h3>
 <p>Tempoary setting</p>
-<pre><code>pip install -I https://pypi.douban.com/simple/
-</code></pre>
+<div class="codehilite"><pre><span></span>pip install -I https://pypi.douban.com/simple/
+</pre></div>
+
 
 <p>Persistence setting: edit $HOME/.pip/pip.conf(Unix) or %HOME%\pip\pip.ini(Windows)</p>
-<pre><code>[global]
+<div class="codehilite"><pre><span></span>[global]
 timeout = 6000
 index-url = http://pypi.douban.com/simple 
 trusted-host = pypi.douban.com
-</code></pre>
+</pre></div>
 
-<h3 id="create-virtualenv-with-specified-version">Create Virtualenv with specified version</h3>
-<pre><code>virtualenv env -p /usr/bin/python3.7
-</code></pre>
 
-<h2 id="code-sample">Code Sample</h2>
-<h3 id="get-current-script-location">Get current script location</h3>
-<pre><code>scriptLocation = os.path.dirname(os.path.realpath(__file__))
-</code></pre>
+<h3 id="create-virtualenv-with-specified-version">Create Virtualenv with specified version<a class="headerlink" href="#create-virtualenv-with-specified-version" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>virtualenv env -p /usr/bin/python3.7
+</pre></div>
 
-<h3 id="get-current-local-datetime">Get current local datetime</h3>
-<pre><code>time_str = time.strftime('%Y-%m-%d %H%m%S', time.localtime())
-</code></pre>
 
-<h3 id="export-xlsx-without-url-format">Export xlsx without url format</h3>
-<pre><code>with pd.ExcelWriter(filepath, engine='xlsxwriter', options={'strings_to_urls': False}) as writer:
-    df.to_excel(writer, index=False)
-</code></pre>
+<h2 id="code-sample">Code Sample<a class="headerlink" href="#code-sample" title="Permanent link">&para;</a></h2>
+<h3 id="get-current-script-location">Get current script location<a class="headerlink" href="#get-current-script-location" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">scriptLocation</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+</pre></div>
 
-<h3 id="save-excel-readabel-csv-with-utf-9">Save excel-readabel csv with utf-9</h3>
-<pre><code>with open(&quot;food.csv&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
-    f.write('\ufeff')
-    df.to_csv(f, encoding=&quot;utf-8&quot;, index=False)
-</code></pre>
 
-<h3 id="sort-by-a-list">Sort by a list</h3>
-<pre><code>[x for _,x in sorted(zip(Y,X))]
-</code></pre>
+<h3 id="get-current-local-datetime">Get current local datetime<a class="headerlink" href="#get-current-local-datetime" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">time_str</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H%m%S&#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">())</span>
+</pre></div>
 
-<h3 id="quickly-understand-the-information-redundancy-of-a-list">Quickly understand the information redundancy of a list</h3>
-<pre><code>{x:df[x].duplicated().sum()/df.shape[0] for x in df.columns}
-</code></pre>
-<h3 id="vertical-cmobine-two-array">Vertical Cmobine two array</h3>
-<pre><code>np.vstack((x.T,y.T)).T
-</code></pre>
 
-<h2 id="oop">OOP</h2>
-<h3 id="static-method-vs-class-method">Static method vs class method</h3>
+<h3 id="export-xlsx-without-url-format">Export xlsx without url format<a class="headerlink" href="#export-xlsx-without-url-format" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelWriter</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;xlsxwriter&#39;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;strings_to_urls&#39;</span><span class="p">:</span> <span class="bp">False</span><span class="p">})</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="save-excel-readabel-csv-with-utf-9">Save excel-readabel csv with utf-9<a class="headerlink" href="#save-excel-readabel-csv-with-utf-9" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;food.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\ufeff</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="sort-by-a-list">Sort by a list<a class="headerlink" href="#sort-by-a-list" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="p">))]</span>
+</pre></div>
+
+
+<h3 id="quickly-understand-the-information-redundancy-of-a-list">Quickly understand the information redundancy of a list<a class="headerlink" href="#quickly-understand-the-information-redundancy-of-a-list" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>    <span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">df</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">}</span>
+</pre></div>
+
+
+<h3 id="vertical-cmobine-two-array">Vertical Cmobine two array<a class="headerlink" href="#vertical-cmobine-two-array" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">y</span><span class="o">.</span><span class="n">T</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+
+
+<h2 id="oop">OOP<a class="headerlink" href="#oop" title="Permanent link">&para;</a></h2>
+<h3 id="static-method-vs-class-method">Static method vs class method<a class="headerlink" href="#static-method-vs-class-method" title="Permanent link">&para;</a></h3>
 <p>Static method can be used before class init.</p>
-<h2 id="data-science">Data Science</h2>
-<h2 id="distribution">Distribution</h2>
-<h2 id="debug">Debug</h2>
-<h3 id="microsoft-visual-c-140-is-required">Microsoft Visual C++ 14.0 is required</h3>
+<h2 id="data-science">Data Science<a class="headerlink" href="#data-science" title="Permanent link">&para;</a></h2>
+<h2 id="distribution">Distribution<a class="headerlink" href="#distribution" title="Permanent link">&para;</a></h2>
+<h2 id="debug">Debug<a class="headerlink" href="#debug" title="Permanent link">&para;</a></h2>
+<h3 id="microsoft-visual-c-140-is-required">Microsoft Visual C++ 14.0 is required<a class="headerlink" href="#microsoft-visual-c-140-is-required" title="Permanent link">&para;</a></h3>
 <p>visit <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml">https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml</a> and download compiled package</p>
-<h3 id="croniter-error-when-install-django">Croniter error when install Django</h3>
+<h3 id="croniter-error-when-install-django">Croniter error when install Django<a class="headerlink" href="#croniter-error-when-install-django" title="Permanent link">&para;</a></h3>
 <p>Version 0.3.26 and 0.3.27 is not exists at croniter, modify version(like 0.3.28) at requirements.txt</p>
                 
                   

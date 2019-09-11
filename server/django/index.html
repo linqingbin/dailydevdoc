@@ -714,94 +714,108 @@
               
                 
                 
-                <h1 id="django">Django</h1>
-<h2 id="install">Install</h2>
-<pre><code>pip install django
-</code></pre>
+                <h1 id="django">Django<a class="headerlink" href="#django" title="Permanent link">&para;</a></h1>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>pip install django
+</pre></div>
 
-<h2 id="admin">Admin</h2>
-<h3 id="start-new-project">Start new project</h3>
-<pre><code>django-admin startproject {site name}
-</code></pre>
 
-<h3 id="start-new-app">Start new app</h3>
+<h2 id="admin">Admin<a class="headerlink" href="#admin" title="Permanent link">&para;</a></h2>
+<h3 id="start-new-project">Start new project<a class="headerlink" href="#start-new-project" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>django-admin startproject {site name}
+</pre></div>
+
+
+<h3 id="start-new-app">Start new app<a class="headerlink" href="#start-new-app" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Create new app folder: <code>python manage.py startapp {app name} {app path}</code></li>
 <li>Add app to <code>setting.py</code>: <code>setting.installed_apps</code></li>
 <li>
 <p>Create Model in <code>models.py</code></p>
-<pre><code>from django.db import models
+<div class="codehilite"><pre><span></span>from django.db import models
 
 class User(models.Model):
-    name = models.CharField(max_length=50, default="admin")
+    name = models.CharField(max_length=50, default=&quot;admin&quot;)
     email = models.EmailField(max_length=50)
-</code></pre>
+</pre></div>
+
+
 </li>
 <li>
 <p>Create view in <code>views.py</code></p>
-<pre><code>from django.http import JsonResponse, HttpResponse
+<div class="codehilite"><pre><span></span>from django.http import JsonResponse, HttpResponse
 def hello(request):
-    return HttpResponse("Hello")
-</code></pre>
+    return HttpResponse(&quot;Hello&quot;)
+</pre></div>
+
+
 </li>
 <li>
 <p>Add route in <code>urls.py</code></p>
-<pre><code>from django.urls import path
+<div class="codehilite"><pre><span></span>from django.urls import path
 from newapp import views
 
 urlpatterns = [
-    path('newapp', views.hello),
+    path(&#39;newapp&#39;, views.hello),
 ]
-</code></pre>
+</pre></div>
+
+
 </li>
 <li>
 <p>Add urls in global <code>urls.py</code>:</p>
-<pre><code>from django.conf.urls import include, url
+<div class="codehilite"><pre><span></span>from django.conf.urls import include, url
 urlpatterns = [
-    path('newapp', include('newapp.urls')),
+    path(&#39;newapp&#39;, include(&#39;newapp.urls&#39;)),
 ]
-</code></pre>
+</pre></div>
+
+
 </li>
 <li>
 <p>(Optionally) Add model to admin in <code>admin.py</code></p>
-<pre><code>from django.contrib import admin
+<div class="codehilite"><pre><span></span>from django.contrib import admin
 from newpp.models import User
 
 @admin.register(User)
 def UserAdmin(admin.ModelAdmin):
     pass
-</code></pre>
+</pre></div>
+
+
 </li>
 <li>
 <p>Finished</p>
 </li>
 </ol>
-<h3 id="change-admin-password">Change admin password</h3>
-<pre><code>python manage.py changepassword &lt;user_name&gt;
-</code></pre>
+<h3 id="change-admin-password">Change admin password<a class="headerlink" href="#change-admin-password" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>python manage.py changepassword &lt;user_name&gt;
+</pre></div>
 
-<h3 id="two-different-ways-to-add-url">Two different ways to add url</h3>
+
+<h3 id="two-different-ways-to-add-url">Two different ways to add url<a class="headerlink" href="#two-different-ways-to-add-url" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Use include</li>
 </ul>
-<pre><code class="python">from django.conf.urls import include, url
-urlpatterns = [
-    path('newapp', include('newapp.urls')),
-]
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">include</span><span class="p">,</span> <span class="n">url</span>
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;newapp&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;newapp.urls&#39;</span><span class="p">)),</span>
+<span class="p">]</span>
+</pre></div>
+
 
 <ul>
 <li>Import module</li>
 </ul>
-<pre><code class="python">from django.conf.urls import include, url
-import newapp
-urlpatterns = [
-    path('newapp', newapp.urls),
-]
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">include</span><span class="p">,</span> <span class="n">url</span>
+<span class="kn">import</span> <span class="nn">newapp</span>
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;newapp&#39;</span><span class="p">,</span> <span class="n">newapp</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+<span class="p">]</span>
+</pre></div>
 
-</code></pre>
 
-<h3 id="frequently-used-moudles">Frequently used moudles</h3>
+<h3 id="frequently-used-moudles">Frequently used moudles<a class="headerlink" href="#frequently-used-moudles" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -863,49 +877,55 @@ urlpatterns = [
 </tr>
 </tbody>
 </table>
-<h2 id="models">Models</h2>
-<h3 id="init-model">Init model</h3>
-<pre><code>Question(question_text=&quot;What's new?&quot;,pub_date=timezone.now())
-</code></pre>
+<h2 id="models">Models<a class="headerlink" href="#models" title="Permanent link">&para;</a></h2>
+<h3 id="init-model">Init model<a class="headerlink" href="#init-model" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>Question(question_text=&quot;What&#39;s new?&quot;,pub_date=timezone.now())
+</pre></div>
 
-<h3 id="query-model">Query model</h3>
-<pre><code>Question.objects.get(pk=1)
+
+<h3 id="query-model">Query model<a class="headerlink" href="#query-model" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>Question.objects.get(pk=1)
 Question.objects.all()
 Question.objects.filter()
 Question.objects.raw({SQL})
-</code></pre>
+</pre></div>
 
-<h3 id="debugging-model">Debugging model</h3>
-<pre><code>python manage.py shell
-</code></pre>
 
-<h2 id="views">Views</h2>
-<h3 id="build-response">Build response</h3>
+<h3 id="debugging-model">Debugging model<a class="headerlink" href="#debugging-model" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>python manage.py shell
+</pre></div>
+
+
+<h2 id="views">Views<a class="headerlink" href="#views" title="Permanent link">&para;</a></h2>
+<h3 id="build-response">Build response<a class="headerlink" href="#build-response" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Html</li>
 </ul>
-<pre><code class="python">from django.shortcuts import render
-def hello(request)
-    return render(request, '{html page path}', {data})
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;{html page path}&#39;</span><span class="p">,</span> <span class="p">{</span><span class="n">data</span><span class="p">})</span>
+</pre></div>
+
 
 <ul>
 <li>Json</li>
 </ul>
-<pre><code class="python">from django.http import HttpResponse
-def hello(request)
-    return JsonResponse({data})
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="n">data</span><span class="p">})</span>
+</pre></div>
+
 
 <ul>
 <li>Others</li>
 </ul>
-<pre><code class="python">from django.http import HttpResponse
-def hello(request)
-    return HttpResponse(status=201)
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="mi">201</span><span class="p">)</span>
+</pre></div>
 
-<h3 id="get-request-content">Get request content</h3>
+
+<h3 id="get-request-content">Get request content<a class="headerlink" href="#get-request-content" title="Permanent link">&para;</a></h3>
 <ul>
 <li>GET: <code>request.GET.dict()</code></li>
 <li>POST: <code>request.POST.dict()</code></li>
@@ -913,60 +933,69 @@ def hello(request)
 <li>PATCH: same with put</li>
 <li>DELETE: same with put</li>
 </ul>
-<h2 id="test">Test</h2>
+<h2 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h2>
 <p>Build test script</p>
-<pre><code>from django.test import TestCase
+<div class="codehilite"><pre><span></span>from django.test import TestCase
 class Test1(TestCase):
     def test_get():
-        result = self.client.get('user')
-</code></pre>
+        result = self.client.get(&#39;user&#39;)
+</pre></div>
+
 
 <p>Run test</p>
-<pre><code>python manage.py test newapp
-</code></pre>
+<div class="codehilite"><pre><span></span>python manage.py test newapp
+</pre></div>
 
-<h2 id="django-rest-framework">Django Rest framework</h2>
-<h3 id="install_1">Install</h3>
-<pre><code>pip install rest_framework
-</code></pre>
 
-<h3 id="create-new-api">Create new API</h3>
+<h2 id="django-rest-framework">Django Rest framework<a class="headerlink" href="#django-rest-framework" title="Permanent link">&para;</a></h2>
+<h3 id="install_1">Install<a class="headerlink" href="#install_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>pip install rest_framework
+</pre></div>
+
+
+<h3 id="create-new-api">Create new API<a class="headerlink" href="#create-new-api" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Create model as usual</li>
 <li>
 <p>Serialize Model</p>
-<pre><code>from newapp.models import User
+<div class="codehilite"><pre><span></span>from newapp.models import User
 from rest_framework import serializers
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         User = User
-        fields = ('username', 'email')
-</code></pre>
+        fields = (&#39;username&#39;, &#39;email&#39;)
+</pre></div>
+
+
 </li>
 <li>
 <p>Create API view</p>
-<pre><code>from rest_framework import viewsets
+<div class="codehilite"><pre><span></span>from rest_framework import viewsets
 from newapp.models import User
 from newapp.serializers import UserSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all().order_by('-date_joined')
+    queryset = User.objects.all().order_by(&#39;-date_joined&#39;)
     serializer_class = UserSerializer
-</code></pre>
+</pre></div>
+
+
 </li>
 <li>
 <p>Add urls</p>
-<pre><code>from django.urls import include, path
+<div class="codehilite"><pre><span></span>from django.urls import include, path
 from rest_framework import routers
 from newapp import views
 
 router = routers.DefaultRouter()
-router.register('users', views.UserViewSet)
-</code></pre>
+router.register(&#39;users&#39;, views.UserViewSet)
+</pre></div>
+
+
 </li>
 </ol>
-<h2 id="referral">Referral</h2>
+<h2 id="referral">Referral<a class="headerlink" href="#referral" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://docs.djangoproject.com">Django Document</a></li>
 <li><a href="https://www.django-rest-framework.org/tutorial/quickstart/">Django Rest framework quick start site</a></li>

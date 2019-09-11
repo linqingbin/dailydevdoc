@@ -618,91 +618,100 @@
               
                 
                 
-                <h1 id="nginx">Nginx</h1>
-<h2 id="install">Install</h2>
+                <h1 id="nginx">Nginx<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h1>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
 <p>Install on Ubuntu</p>
-<pre><code>sudo apt-get update
+<div class="codehilite"><pre><span></span>sudo apt-get update
 sudo apt-get install nginx
-</code></pre>
+</pre></div>
+
 
 <p>Version check</p>
-<pre><code>nginx -v
-</code></pre>
+<div class="codehilite"><pre><span></span>nginx -v
+</pre></div>
 
-<h2 id="admin">Admin</h2>
-<h3 id="start-server">Start server</h3>
-<pre><code class="shell">sudo /etc/init.d/nginx start
-# or
+
+<h2 id="admin">Admin<a class="headerlink" href="#admin" title="Permanent link">&para;</a></h2>
+<h3 id="start-server">Start server<a class="headerlink" href="#start-server" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>sudo /etc/init.d/nginx start
+<span class="c1"># or</span>
 sudo /usr/local/nginx/sbin/nginx
-# or
+<span class="c1"># or</span>
 sudo service nginx start
-# commands: stop, status, reload
-</code></pre>
+<span class="c1"># commands: stop, status, reload</span>
+</pre></div>
 
-<h3 id="test-config">Test config</h3>
-<pre><code>sudo nginx -t
-</code></pre>
 
-<h3 id="view-process">View process</h3>
-<pre><code>ps -ef |grep nginx
-</code></pre>
+<h3 id="test-config">Test config<a class="headerlink" href="#test-config" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>sudo nginx -t
+</pre></div>
 
-<h3 id="view-logs">View logs</h3>
-<pre><code>ls /var/log/nginx/
-</code></pre>
 
-<h2 id="config">Config</h2>
-<h3 id="config-file-location">Config file location</h3>
+<h3 id="view-process">View process<a class="headerlink" href="#view-process" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>ps -ef |grep nginx
+</pre></div>
+
+
+<h3 id="view-logs">View logs<a class="headerlink" href="#view-logs" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>ls /var/log/nginx/
+</pre></div>
+
+
+<h2 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h2>
+<h3 id="config-file-location">Config file location<a class="headerlink" href="#config-file-location" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>/etc/nginx/nginx.conf</code></li>
 <li><code>/etc/nginx/sites-enabled/default</code></li>
 </ul>
-<h3 id="keywords">Keywords</h3>
+<h3 id="keywords">Keywords<a class="headerlink" href="#keywords" title="Permanent link">&para;</a></h3>
 <ul>
 <li>listen: port to listen</li>
 <li>server_name: host or domin</li>
 <li>root: site root directory</li>
 <li>location: route index</li>
 </ul>
-<h3 id="config-sample">Config sample</h3>
+<h3 id="config-sample">Config sample<a class="headerlink" href="#config-sample" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Static website server</li>
 </ul>
-<pre><code>server {
+<div class="codehilite"><pre><span></span>server {
     listen 80;
     server_name 10.10.10.10;
 
     root /{app_root_directory}/;
     index index.html;
 }
-</code></pre>
+</pre></div>
+
 
 <ul>
 <li>Dynamic website server</li>
 </ul>
-<pre><code class="shell">server {
-    listen 80;
-    server_name 10.10.10.10;
+<div class="codehilite"><pre><span></span>server <span class="o">{</span>
+    listen <span class="m">80</span><span class="p">;</span>
+    server_name <span class="m">10</span>.10.10.10<span class="p">;</span>
 
-    location / {
-        proxy_pass {dynamic server url};
-        # sample: proxy_pass http://127.0.0.1:5500
-    }
-}
-</code></pre>
+    location / <span class="o">{</span>
+        proxy_pass <span class="o">{</span>dynamic server url<span class="o">}</span><span class="p">;</span>
+        <span class="c1"># sample: proxy_pass http://127.0.0.1:5500</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
 
 <ul>
 <li>Add static resource </li>
 </ul>
-<pre><code>location /static/ {
+<div class="codehilite"><pre><span></span>location /static/ {
     root /{app_static_directory}/;
 }
-</code></pre>
+</pre></div>
 
-<h2 id="debug">Debug</h2>
-<h3 id="403-error">403 Error</h3>
+
+<h2 id="debug">Debug<a class="headerlink" href="#debug" title="Permanent link">&para;</a></h2>
+<h3 id="403-error">403 Error<a class="headerlink" href="#403-error" title="Permanent link">&para;</a></h3>
 <p>Maybe file permission problem, increase Nginx permsision or set user at nginx.conf, or decrease target files permission.</p>
-<h2 id="referral">Referral</h2>
+<h2 id="referral">Referral<a class="headerlink" href="#referral" title="Permanent link">&para;</a></h2>
 <p><a href="http://nginx.org/en/docs/beginners_guide.html">Nginx Offcial Document</a></p>
                 
                   

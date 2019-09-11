@@ -522,41 +522,45 @@
               
                 
                 
-                <h1 id="supervisor">Supervisor</h1>
-<h2 id="install">Install</h2>
-<pre><code class="shell">pip install supervisor
-</code></pre>
+                <h1 id="supervisor">Supervisor<a class="headerlink" href="#supervisor" title="Permanent link">&para;</a></h1>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>pip install supervisor
+</pre></div>
 
-<h2 id="admin">Admin</h2>
-<h3 id="start">Start</h3>
-<pre><code class="shell"># In config directory
-cd /etc/supervisor/
+
+<h2 id="admin">Admin<a class="headerlink" href="#admin" title="Permanent link">&para;</a></h2>
+<h3 id="start">Start<a class="headerlink" href="#start" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="c1"># In config directory</span>
+<span class="nb">cd</span> /etc/supervisor/
 supervisord
-</code></pre>
+</pre></div>
+
 
 <p>If start multiple supervisor task accidently, kill process find in <code>ps -ef</code>.</p>
-<h2 id="command-tool">Command tool</h2>
-<pre><code class="shell"># run
+<h2 id="command-tool">Command tool<a class="headerlink" href="#command-tool" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="c1"># run</span>
 supervisorctl
-# shutdown
+<span class="c1"># shutdown</span>
 supervisorctl shutdown
-</code></pre>
+</pre></div>
 
-<h2 id="config">Config</h2>
+
+<h2 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h2>
 <p>File location: /etc/supervisor/supervisord.conf</p>
 <p>Config Sample</p>
-<pre><code class="shell">[supervisord]
+<div class="codehilite"><pre><span></span><span class="o">[</span>supervisord<span class="o">]</span>
 
-[supervisorctl]
+<span class="o">[</span>supervisorctl<span class="o">]</span>
 
-[program:foo]
-command=/root/projects/servertest/env/bin/python /root/projects/servertest/manage.py runserver
-</code></pre>
+<span class="o">[</span>program:foo<span class="o">]</span>
+<span class="nv">command</span><span class="o">=</span>/root/projects/servertest/env/bin/python /root/projects/servertest/manage.py runserver
+</pre></div>
 
-<h2 id="debug">Debug</h2>
-<h3 id="execute-faild">Execute faild</h3>
-<pre><code>Permission related
-</code></pre>
+
+<h2 id="debug">Debug<a class="headerlink" href="#debug" title="Permanent link">&para;</a></h2>
+<h3 id="execute-faild">Execute faild<a class="headerlink" href="#execute-faild" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>Permission related
+</pre></div>
                 
                   
                 
