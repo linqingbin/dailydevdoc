@@ -49,3 +49,10 @@ theme:
 
 extra_css:
     - static/css/extra.css
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true

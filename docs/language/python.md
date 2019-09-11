@@ -54,39 +54,41 @@ virtualenv env -p /usr/bin/python3.7
 ## Code Sample
 
 ### Get current script location
-```
+```python
 scriptLocation = os.path.dirname(os.path.realpath(__file__))
 ```
 	
 
 ### Get current local datetime
-```
+```python
 time_str = time.strftime('%Y-%m-%d %H%m%S', time.localtime())
 ```
 
 ### Export xlsx without url format
-```
+```python
 with pd.ExcelWriter(filepath, engine='xlsxwriter', options={'strings_to_urls': False}) as writer:
     df.to_excel(writer, index=False)
 ```
 
 ### Save excel-readabel csv with utf-9
-```
+```python
 with open("food.csv", "w", encoding="utf-8") as f:
     f.write('\ufeff')
     df.to_csv(f, encoding="utf-8", index=False)
 ```
 
 ### Sort by a list
-```
+```python
 [x for _,x in sorted(zip(Y,X))]
 ```
 
 ### Quickly understand the information redundancy of a list
+```python
 	{x:df[x].duplicated().sum()/df.shape[0] for x in df.columns}
+```
 
 ### Vertical Cmobine two array 
-```
+```python
 np.vstack((x.T,y.T)).T
 ```
 ## OOP
