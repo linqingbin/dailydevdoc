@@ -1,4 +1,4 @@
-site_name: Daily Developing Guide
+site_name: Daily Developing Guide (on construction)
 nav:
     - Home: index.md
     - Language:
@@ -23,8 +23,8 @@ nav:
         # - Gunrion
         # - Mongodb
         # - PostgreSQL
-    # - Modeling:
-    #     - Data preprocessing: modeling/dataPreprocessing.md
+    - Data Science:
+        - Data processing: datascience/dataProcessing.md
         # - Clusifiy
         # - Cluster 
         # - Utils
