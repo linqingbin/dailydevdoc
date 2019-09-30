@@ -19,6 +19,8 @@ nav:
         - Mkdocs: server/mkdocs.md
         - Django: server/django.md
         - Airflow: server/airflow.md
+        - Scrapy: server/scrapy.md
+
         # - Flask
         # - Gunrion
         # - Mongodb
@@ -39,7 +41,7 @@ nav:
 theme: 
   name: material
   palette:
-    primary: 'Light Green'
+    primary: 'white'
     accent: 'pink'
   logo:
     icon: 'cloud'

@@ -1,13 +1,23 @@
 h1 {
+    
     font-weight: 800 !important;
 }
 
 h2 {
     font-weight: 500 !important;
-    color: rgb(124, 179, 66);
+    color: #3f51c6  !important;
 }
 
 h3 {
     font-size: 0.8rem !important;
     color: rgb(233, 30, 99);
+}
+
+a:link,a:hover {
+    color: #5887dc !important;
+}
+
+.md-header {
+    color: white !important;
+    background:grey !important;
 }
