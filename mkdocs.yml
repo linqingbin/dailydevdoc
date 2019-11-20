@@ -25,8 +25,9 @@ nav:
         # - Gunrion
         # - Mongodb
         # - PostgreSQL
-    - Data Science:
-        - Data processing: datascience/dataProcessing.md
+    - Data:
+        - Data processing: data/dataProcessing.md
+        - Chart: data/chart.md
         # - Clusifiy
         # - Cluster 
         # - Utils
