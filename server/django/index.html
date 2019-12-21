@@ -1,0 +1,1138 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>Django - Daily Developing Guide (on construction)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../static/css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#django" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Daily Developing Guide (on construction)" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">cloud</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Daily Developing Guide (on construction)
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Django
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Daily Developing Guide (on construction)" class="md-nav__button md-logo">
+      
+        <i class="md-icon">cloud</i>
+      
+    </a>
+    Daily Developing Guide (on construction)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Language
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Language
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../language/python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../language/sql/" title="SQL" class="md-nav__link">
+      SQL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../language/unix_commnads_bash/" title="Unix Commands & Bash" class="md-nav__link">
+      Unix Commands & Bash
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Server
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Server
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="Nginx" class="md-nav__link">
+      Nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../supervisor/" title="Supervisor" class="md-nav__link">
+      Supervisor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mkdocs/" title="Mkdocs" class="md-nav__link">
+      Mkdocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Django
+      </label>
+    
+    <a href="./" title="Django" class="md-nav__link md-nav__link--active">
+      Django
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin" class="md-nav__link">
+    Admin
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-new-project" class="md-nav__link">
+    Start new project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-new-app" class="md-nav__link">
+    Start new app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-admin-password" class="md-nav__link">
+    Change admin password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-different-ways-to-add-url" class="md-nav__link">
+    Two different ways to add url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequently-used-moudles" class="md-nav__link">
+    Frequently used moudles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    Models
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#init-model" class="md-nav__link">
+    Init model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-model" class="md-nav__link">
+    Query model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-model" class="md-nav__link">
+    Debugging model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    Views
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-response" class="md-nav__link">
+    Build response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-request-content" class="md-nav__link">
+    Get request content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    Test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-rest-framework" class="md-nav__link">
+    Django Rest framework
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install_1" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-new-api" class="md-nav__link">
+    Create new API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referral" class="md-nav__link">
+    Referral
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../airflow/" title="Airflow" class="md-nav__link">
+      Airflow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scrapy/" title="Scrapy" class="md-nav__link">
+      Scrapy
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/dataProcessing/" title="Data processing" class="md-nav__link">
+      Data processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data/chart/" title="Chart" class="md-nav__link">
+      Chart
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin" class="md-nav__link">
+    Admin
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-new-project" class="md-nav__link">
+    Start new project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-new-app" class="md-nav__link">
+    Start new app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-admin-password" class="md-nav__link">
+    Change admin password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-different-ways-to-add-url" class="md-nav__link">
+    Two different ways to add url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequently-used-moudles" class="md-nav__link">
+    Frequently used moudles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    Models
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#init-model" class="md-nav__link">
+    Init model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-model" class="md-nav__link">
+    Query model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-model" class="md-nav__link">
+    Debugging model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    Views
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-response" class="md-nav__link">
+    Build response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-request-content" class="md-nav__link">
+    Get request content
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    Test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-rest-framework" class="md-nav__link">
+    Django Rest framework
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install_1" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-new-api" class="md-nav__link">
+    Create new API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referral" class="md-nav__link">
+    Referral
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="django">Django<a class="headerlink" href="#django" title="Permanent link">&para;</a></h1>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>pip install django
+</pre></div>
+
+
+<h2 id="admin">Admin<a class="headerlink" href="#admin" title="Permanent link">&para;</a></h2>
+<h3 id="start-new-project">Start new project<a class="headerlink" href="#start-new-project" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>django-admin startproject {site name}
+</pre></div>
+
+
+<h3 id="start-new-app">Start new app<a class="headerlink" href="#start-new-app" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Create new app folder: <code>python manage.py startapp {app name} {app path}</code></li>
+<li>Add app to <code>setting.py</code>: <code>setting.installed_apps</code></li>
+<li>
+<p>Create Model in <code>models.py</code></p>
+<div class="codehilite"><pre><span></span>from django.db import models
+
+class User(models.Model):
+    name = models.CharField(max_length=50, default=&quot;admin&quot;)
+    email = models.EmailField(max_length=50)
+</pre></div>
+
+
+</li>
+<li>
+<p>Create view in <code>views.py</code></p>
+<div class="codehilite"><pre><span></span>from django.http import JsonResponse, HttpResponse
+def hello(request):
+    return HttpResponse(&quot;Hello&quot;)
+</pre></div>
+
+
+</li>
+<li>
+<p>Add route in <code>urls.py</code></p>
+<div class="codehilite"><pre><span></span>from django.urls import path
+from newapp import views
+
+urlpatterns = [
+    path(&#39;newapp&#39;, views.hello),
+]
+</pre></div>
+
+
+</li>
+<li>
+<p>Add urls in global <code>urls.py</code>:</p>
+<div class="codehilite"><pre><span></span>from django.conf.urls import include, url
+urlpatterns = [
+    path(&#39;newapp&#39;, include(&#39;newapp.urls&#39;)),
+]
+</pre></div>
+
+
+</li>
+<li>
+<p>(Optionally) Add model to admin in <code>admin.py</code></p>
+<div class="codehilite"><pre><span></span>from django.contrib import admin
+from newpp.models import User
+
+@admin.register(User)
+def UserAdmin(admin.ModelAdmin):
+    pass
+</pre></div>
+
+
+</li>
+<li>
+<p>Finished</p>
+</li>
+</ol>
+<h3 id="change-admin-password">Change admin password<a class="headerlink" href="#change-admin-password" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>python manage.py changepassword &lt;user_name&gt;
+</pre></div>
+
+
+<h3 id="two-different-ways-to-add-url">Two different ways to add url<a class="headerlink" href="#two-different-ways-to-add-url" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use include</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">include</span><span class="p">,</span> <span class="n">url</span>
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;newapp&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;newapp.urls&#39;</span><span class="p">)),</span>
+<span class="p">]</span>
+</pre></div>
+
+
+<ul>
+<li>Import module</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">include</span><span class="p">,</span> <span class="n">url</span>
+<span class="kn">import</span> <span class="nn">newapp</span>
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;newapp&#39;</span><span class="p">,</span> <span class="n">newapp</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+<span class="p">]</span>
+</pre></div>
+
+
+<h3 id="frequently-used-moudles">Frequently used moudles<a class="headerlink" href="#frequently-used-moudles" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Moduel</th>
+<th>Useage</th>
+<th>Sample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">django.db</td>
+<td>build model</td>
+<td>from django.db import models</td>
+</tr>
+<tr>
+<td align="center">django.http</td>
+<td>build response</td>
+<td>from django.http import JsonResponse</td>
+</tr>
+<tr>
+<td align="center">django.urls</td>
+<td>build route</td>
+<td>from django.urls import path</td>
+</tr>
+<tr>
+<td align="center">django.core</td>
+<td>core modules</td>
+<td>from django.core import serializers</td>
+</tr>
+<tr>
+<td align="center">django.contrib</td>
+<td>addon modules</td>
+<td>from django.contrib import admin</td>
+</tr>
+<tr>
+<td align="center">django.shortcuts</td>
+<td>Convenient shortcut</td>
+<td>from django.shortcuts import render</td>
+</tr>
+<tr>
+<td align="center">django.utils</td>
+<td>common tools</td>
+<td>from django.utils import timezone</td>
+</tr>
+<tr>
+<td align="center">django.conf</td>
+<td>get django config</td>
+<td>from django.conf import settings</td>
+</tr>
+<tr>
+<td align="center">django.apps</td>
+<td>get django app config</td>
+<td>from django.apps import AppConfig</td>
+</tr>
+<tr>
+<td align="center">django.test</td>
+<td>build test</td>
+<td>from django.test import TestCase</td>
+</tr>
+</tbody>
+</table>
+<h2 id="models">Models<a class="headerlink" href="#models" title="Permanent link">&para;</a></h2>
+<h3 id="init-model">Init model<a class="headerlink" href="#init-model" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>Question(question_text=&quot;What&#39;s new?&quot;,pub_date=timezone.now())
+</pre></div>
+
+
+<h3 id="query-model">Query model<a class="headerlink" href="#query-model" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>Question.objects.get(pk=1)
+Question.objects.all()
+Question.objects.filter()
+Question.objects.raw({SQL})
+</pre></div>
+
+
+<h3 id="debugging-model">Debugging model<a class="headerlink" href="#debugging-model" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>python manage.py shell
+</pre></div>
+
+
+<h2 id="views">Views<a class="headerlink" href="#views" title="Permanent link">&para;</a></h2>
+<h3 id="build-response">Build response<a class="headerlink" href="#build-response" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Html</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;{html page path}&#39;</span><span class="p">,</span> <span class="p">{</span><span class="n">data</span><span class="p">})</span>
+</pre></div>
+
+
+<ul>
+<li>Json</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="n">data</span><span class="p">})</span>
+</pre></div>
+
+
+<ul>
+<li>Others</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="mi">201</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="get-request-content">Get request content<a class="headerlink" href="#get-request-content" title="Permanent link">&para;</a></h3>
+<ul>
+<li>GET: <code>request.GET.dict()</code></li>
+<li>POST: <code>request.POST.dict()</code></li>
+<li>PUT: <code>from django.http import QueryDict;QueryDict(request.body)</code></li>
+<li>PATCH: same with put</li>
+<li>DELETE: same with put</li>
+</ul>
+<h2 id="test">Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h2>
+<p>Build test script</p>
+<div class="codehilite"><pre><span></span>from django.test import TestCase
+class Test1(TestCase):
+    def test_get():
+        result = self.client.get(&#39;user&#39;)
+</pre></div>
+
+
+<p>Run test</p>
+<div class="codehilite"><pre><span></span>python manage.py test newapp
+</pre></div>
+
+
+<h2 id="django-rest-framework">Django Rest framework<a class="headerlink" href="#django-rest-framework" title="Permanent link">&para;</a></h2>
+<h3 id="install_1">Install<a class="headerlink" href="#install_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>pip install rest_framework
+</pre></div>
+
+
+<h3 id="create-new-api">Create new API<a class="headerlink" href="#create-new-api" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Create model as usual</li>
+<li>
+<p>Serialize Model</p>
+<div class="codehilite"><pre><span></span>from newapp.models import User
+from rest_framework import serializers
+
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        User = User
+        fields = (&#39;username&#39;, &#39;email&#39;)
+</pre></div>
+
+
+</li>
+<li>
+<p>Create API view</p>
+<div class="codehilite"><pre><span></span>from rest_framework import viewsets
+from newapp.models import User
+from newapp.serializers import UserSerializer
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all().order_by(&#39;-date_joined&#39;)
+    serializer_class = UserSerializer
+</pre></div>
+
+
+</li>
+<li>
+<p>Add urls</p>
+<div class="codehilite"><pre><span></span>from django.urls import include, path
+from rest_framework import routers
+from newapp import views
+
+router = routers.DefaultRouter()
+router.register(&#39;users&#39;, views.UserViewSet)
+</pre></div>
+
+
+</li>
+</ol>
+<h2 id="referral">Referral<a class="headerlink" href="#referral" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://docs.djangoproject.com">Django Document</a></li>
+<li><a href="https://www.django-rest-framework.org/tutorial/quickstart/">Django Rest framework quick start site</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../mkdocs/" title="Mkdocs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Mkdocs
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../airflow/" title="Airflow" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Airflow
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c648116f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
