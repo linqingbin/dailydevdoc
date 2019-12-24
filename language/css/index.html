@@ -36,7 +36,7 @@
     
     
       
-        <title>Chart - Daily Developing Guide (on construction)</title>
+        <title>CSS - Daily Developing Guide (on construction)</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#chart" tabindex="1" class="md-skip">
+      <a href="#css" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Chart
+                CSS
               
             </span>
           
@@ -190,10 +190,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Language
@@ -211,7 +213,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../language/python/" title="Python" class="md-nav__link">
+    <a href="../python/" title="Python" class="md-nav__link">
       Python
     </a>
   </li>
@@ -223,7 +225,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../language/sql/" title="SQL" class="md-nav__link">
+    <a href="../sql/" title="SQL" class="md-nav__link">
       SQL
     </a>
   </li>
@@ -235,7 +237,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../language/unix_commnads_bash/" title="Unix Commands & Bash" class="md-nav__link">
+    <a href="../unix_commnads_bash/" title="Unix Commands & Bash" class="md-nav__link">
       Unix Commands & Bash
     </a>
   </li>
@@ -245,11 +247,110 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../language/css/" title="CSS" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        CSS
+      </label>
+    
+    <a href="./" title="CSS" class="md-nav__link md-nav__link--active">
       CSS
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    Layout
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#box-model" class="md-nav__link">
+    Box model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
+    Display
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inline" class="md-nav__link">
+    inline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block" class="md-nav__link">
+    block
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flex" class="md-nav__link">
+    flex
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#position" class="md-nav__link">
+    Position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float-and-clear" class="md-nav__link">
+    Float and clear
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -418,12 +519,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Data
@@ -441,7 +540,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../dataProcessing/" title="Data processing" class="md-nav__link">
+    <a href="../../data/dataProcessing/" title="Data processing" class="md-nav__link">
       Data processing
     </a>
   </li>
@@ -451,20 +550,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Chart" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../data/chart/" title="Chart" class="md-nav__link">
       Chart
     </a>
-    
   </li>
 
         
@@ -490,6 +580,83 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    Layout
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#box-model" class="md-nav__link">
+    Box model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display" class="md-nav__link">
+    Display
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inline" class="md-nav__link">
+    inline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#block" class="md-nav__link">
+    block
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flex" class="md-nav__link">
+    flex
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#position" class="md-nav__link">
+    Position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float-and-clear" class="md-nav__link">
+    Float and clear
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -501,43 +668,140 @@
               
                 
                 
-                <h1 id="chart">Chart<a class="headerlink" href="#chart" title="Permanent link">&para;</a></h1>
-<p>Scatter Chart</p>
-<div class="codehilite"><pre><span></span><span class="n">tops</span> <span class="o">=</span> <span class="n">report1</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>
-<span class="n">xlabel</span> <span class="o">=</span> <span class="s2">&quot;xLabel&quot;</span>
-<span class="n">ylabel</span> <span class="o">=</span> <span class="s2">&quot;yLabel&quot;</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">tops</span><span class="p">[</span><span class="n">xlabel</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">tops</span><span class="p">[</span><span class="n">ylabel</span><span class="p">]</span>
-<span class="n">s</span> <span class="o">=</span> <span class="n">tops</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">]</span>
-<span class="n">texts</span> <span class="o">=</span> <span class="n">tops</span><span class="o">.</span><span class="n">index</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">xlabel</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">ylabel</span><span class="p">)</span>
-
-<span class="n">exists</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">txt</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">texts</span><span class="p">):</span>
-    <span class="n">loc</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">loc</span><span class="p">)</span>
-    <span class="n">exists</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>
+                <h1 id="css">CSS<a class="headerlink" href="#css" title="Permanent link">&para;</a></h1>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN Doc</a></p>
+<h2 id="layout">Layout<a class="headerlink" href="#layout" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="nx">layout</span> <span class="o">=</span> <span class="nx">box</span> <span class="nx">model</span> <span class="o">+</span> <span class="nx">display</span> <span class="o">+</span> <span class="nx">position</span> <span class="o">+</span> <span class="kr">float</span><span class="o">/</span><span class="nx">clear</span>
 </pre></div>
 
 
-<p>Display utf-8 character in matplorlib chart</p>
-<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.font_manager</span> <span class="kn">import</span> <span class="n">FontProperties</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="n">font</span> <span class="o">=</span> <span class="n">FontProperties</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span> <span class="s2">&quot;c:/windows/fonts/simsun.ttc&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;百分位图&quot;</span><span class="p">,</span> <span class="n">fontproperties</span> <span class="o">=</span> <span class="n">font</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontproperties</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
+<h3 id="box-model">Box model<a class="headerlink" href="#box-model" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Rule1: All block element is a rectangle block.</p>
+</li>
+<li>
+<p>Rule2</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>element.width = content.width + element.padding + element.border + element.margin
 </pre></div>
 
 
-<p>Display utf-8 character in Graphviz chart</p>
-<div class="codehilite"><pre><span></span>1. Set fonts.conf in Graphviz.
-2. Change souce format as gbk in python graphviz.
-3. Add `node[fontname = &quot;PMingLiu&quot;];` in dot file.
+<ul>
+<li>Rule3</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">element</span><span class="o">.</span><span class="n">width</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">element</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">parentElement</span><span class="o">.</span><span class="n">width</span>
 </pre></div>
+
+
+<ul>
+<li>Rule4</li>
+</ul>
+<div class="codehilite"><pre><span></span>content.width = element.width - element.padding - element.border - element.margin
+</pre></div>
+
+
+<ul>
+<li>Rule5:</li>
+</ul>
+<div class="codehilite"><pre><span></span>width(css) != element.width
+width(css) = content.width
+</pre></div>
+
+
+<h3 id="display">Display<a class="headerlink" href="#display" title="Permanent link">&para;</a></h3>
+<h4 id="inline">inline<a class="headerlink" href="#inline" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>&lt;a&gt;, &lt;span&gt;, &lt;b&gt;, &lt;em&gt;, &lt;i&gt;, &lt;cite&gt;, &lt;mark&gt;, and &lt;code&gt;.
+</pre></div>
+
+
+<ul>
+<li>Text based elements.</li>
+<li>Ignore width and height attributes.</li>
+<li>The top and bottom margins cannot be set. You can set the left and right margins and all the inner margins.</li>
+<li>If you use the float attribute, it becomes a block-level element.</li>
+<li>Can use white-space and vertical-align properties.</li>
+<li>Arranged after the previous text by default.</li>
+<li>Except for <a> which can be placed on block-level elements, other inline elements cannot be placed on block-level elements.</li>
+</ul>
+<h4 id="block">block<a class="headerlink" href="#block" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>&lt;div&gt;, &lt;p&gt;
+</pre></div>
+
+
+<ul>
+<li>Structure-based elements.</li>
+<li>Can control width and height.</li>
+<li>If the width is not set, the width will expand to the width of the parent element.</li>
+<li>If no height is set, the height will be expanded as the child element expands</li>
+<li>Can set padding and padding</li>
+<li>Ignore the vertical-align property.</li>
+<li>Arranged below the previous element by default.</li>
+</ul>
+<h4 id="flex">flex<a class="headerlink" href="#flex" title="Permanent link">&para;</a></h4>
+<p>For flex element:</p>
+<ul>
+<li>set main axis: <code>flex-direction</code></li>
+<li>set is wrap for multiline: <code>flex-wrap</code></li>
+<li>main axis align: <code>justify-content</code></li>
+<li>cross axis align: <code>align-items</code></li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c">/* Normal version */</span>
+ <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+  <span class="c">/* flex-direction: row|row-reverse|column|column-reverse  */</span>
+  <span class="k">flex-direction</span><span class="p">:</span> <span class="kc">row</span><span class="p">;</span>
+  <span class="c">/* flex-wrap: wrap/no-wrap */</span>
+  <span class="k">flex-wrap</span><span class="p">:</span> <span class="kc">wrap</span><span class="p">;</span>
+  <span class="c">/* justify-content: flex-start|flex-end|center|space-around|space-between|space-evenly */</span>
+  <span class="k">justify-content</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+  <span class="c">/* align-items: stretch|flex-start|flex-end|center */</span>
+  <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Short version */</span>
+ <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+  <span class="k">flex-flow</span><span class="p">:</span> <span class="kc">row</span> <span class="kc">wrap</span> <span class="kc">center</span> <span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>For flex childItems:</p>
+<ul>
+<li>flex-grow: additional space assigned when sum(childItems.width) &lt; parentElement.width</li>
+<li>flex-shrink: shrink size when sum(childItems.width) &lt; parentElement.width</li>
+<li>flex-basis: initial main size of a flex item(replace <code>witdth</code>)</li>
+</ul>
+<div class="codehilite"><pre><span></span>childItem.finalSize = flex-basi * flex-grow * flex-shrink
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+  <span class="c">/* 0|1|2 */</span>
+  <span class="k">flex-grow</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="c">/* 0|1|2 */</span>
+  <span class="k">flex-shrink</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="c">/* auto|10px */</span>
+  <span class="k">flex-basis</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Short version */</span>
+ <span class="p">{</span>
+  <span class="k">flex</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="position">Position<a class="headerlink" href="#position" title="Permanent link">&para;</a></h3>
+<ul>
+<li>realtive: from self</li>
+<li>absolute: from parent element</li>
+<li>fixed: from browser window</li>
+</ul>
+<h3 id="float-and-clear">Float and clear<a class="headerlink" href="#float-and-clear" title="Permanent link">&para;</a></h3>
                 
                   
                 
@@ -558,7 +822,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../dataProcessing/" title="Data processing" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../unix_commnads_bash/" title="Unix Commands & Bash" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -567,11 +831,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Data processing
+                Unix Commands & Bash
               </span>
             </div>
           </a>
         
+        
+          <a href="../../library/pytest/" title="Pytest" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Pytest
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
